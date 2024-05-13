@@ -5,3 +5,12 @@ openbtn.addEventListener('click',function (){
 project.style.border='solid black 1px'
 console.log('clicked')
 })
+
+styles = {
+    phone : {
+       
+    },
+    desktop : {
+
+    }
+}
