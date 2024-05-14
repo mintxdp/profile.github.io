@@ -14,46 +14,70 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 30% 40% 30%;
+    grid-template-rows: 25% 50% 25%;
+    place-items: center;
 }
 
 .mainarea{
     grid-column: 2/3;
     grid-row: 2/3;
+    width: 100%;
+    height: 100%;
 }
 
 .nameplate{
- 
-    width: 100%;
-    height: 100%;
-    align-self: center;
+     position: relative;
+     height: 100%;
+     width: 100%;
+     grid-column: 2/3;
+     align-self: center;
     vertical-align:bottom;
-    /* border: solid black 1px; */
    
-    font-size: 6rem;
+    font-size: 5rem;
     font-family: inter;
     font-weight: 100;
 
-
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:repeat(6,1fr) ;
+    place-items: center;
+}
+.banner{
+    position: relative;
+    grid-row: 2/6;
+    grid-column: 1/6;
+    /* transform: translateX(-20%); */
 }
 .name{
     font-family: sacromento;
 }
-.banner{
-    /* width: 50%; */
-    /* height: 100%; */
-    /* border: solid red 1px; */
-}
-.links{
-    /* border: solid black 1px; */
+.sidebar{
+    grid-row:2/6;
+    grid-column: 6/7;
+    /* border: solid rgb(4, 235, 185) 1px; */
+    height: 100%;
     width: 100%;
+    font-size:large ;
+    display: none;
+
+} 
+.side_items{
+    font-family: inter;
+    /* flex-direction: column; */
+     /* width: 100%; */
+ }
+ 
+
+   .links{
+    /* border: solid black 1px; */
+      width: 100%;
       display: flex;
-      font-size: small;
+      font-size:1rem;
       font-family: inter;
       font-weight: 400;
-      
+      /* margin-left:100px; */
 }
-.github{
+   .github{
     margin-left:20px;
     }
     .arrow{
@@ -68,16 +92,11 @@ body{
     }
     .arrow_h{
         position: absolute;
-        /* transform:translate(100%,0) ; */
-        top: 15%;
-        right: 0;
+        right: 0%;
         width:25px;
         height: 25px;
-        /* border: solid red 1px; */
         transform: rotate(-90deg);
-        /* background-color: rgba(128, 
-    128, 128, 0.123); */
-        opacity: 0.3;
+        opacity: 0.6;
     }
     @font-face {
         font-family:inter;
@@ -88,51 +107,50 @@ body{
         font-family: sacromento;
         src: url('assets/Sacramento-Regular.ttf');
     }
-    .xyz{
-        /* font-family: inter; */
-        margin-left: 10%;
-        font-weight:100;
-        font-size: 4rem;
-    
-    }
-    span{
-    font-family: inter;
-    
-    }
-    .dp{
-        font-family: sacromento;
-        font-size: 4rem;
-        margin-left: 20px;
-        font-weight: 500;
-    }
- 
+
+
     
 /* media query*/
 
-@media (width < 750px) {
+@media (width < 700px) {
     .container{
-        grid-template-rows: 20% 50% 30%;
+        grid-template-rows: 20% 60% 20%;
         grid-template-columns: 100%;
     }
     .mainarea{
-    grid-row: 2/3;
+    grid-row: 1/4;
     grid-column: 1/2;
     }
     .nameplate{
         /* padding: 20px; */
-        display: grid;
+        /* display: grid; */
+        grid-template-columns: repeat(10,1fr);
         width: 100%;
         height: 100%;
         place-items: center;
+        font-size: 5rem;
     }
+    .banner{
+        grid-row: 3/5;
+        grid-column: 3/9;
+        width: 100%;
+        height: 100%;
+    }
+    .sidebar{
+        display: none;
+    }
+
     .modebtn{
         /* /* position: fixed; */
         /* top:; */
         left:85%;
     }
     .arrow_h{
-        left: 10%;
-        top: 90%;
-        transform: rotate(0deg);
+        display: none;
+    }
+}
+@media (width < 500px) {
+    .banner{
+        grid-column: 2/11;
     }
 }

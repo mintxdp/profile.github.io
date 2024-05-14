@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style2.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   </head>
   <body>
     <div class="modebtn">
@@ -17,13 +18,17 @@
     </div>
     <div class="container">
       <div class="mainarea">
-        <div class="arrow_h">
-          <img src="assets/down2-1.svg" alt="" />
-        </div>
+
         <div class="nameplate">
-          <div class="banner">
-            hi,<br />I'm <span class="name">Dheeraj</span>
-            <div class="links">
+            <div class="banner">
+                <div class="arrow_h">
+                    <img src="assets/down2-1.svg" alt="" />
+                    </div>
+                     <div>
+                      <div class="hi">hi</div>
+                      <div class="intro">I'm <span class="name">Dheeraj</span></div>
+                    </div>
+                <div class="links">
               <ol class="linkedin">
                 LinkedIn
                 <img
@@ -44,13 +49,20 @@
                   class="arrow"
                 />
               </ol>
+               </div> <!-- links -->
+            </div><!-- banner -->
+            <div class="sidebar">
+              <ol class="side_items item1">Projects</ol>
+              <ol class="side_items item2">Tech Stacks</ol>
+              <ol class="side_items item3">Languages</ol>
+              <ol class="side_items item4">Resume</ol>
+              <ol class="side_items item5">Academic</ol>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="projectarea"></div>
-    </div>
+          </div> <!-- nameplate -->
+        </div> <!-- mainarea -->
+    </div> <!-- container -->
 
     <script src="main.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>
